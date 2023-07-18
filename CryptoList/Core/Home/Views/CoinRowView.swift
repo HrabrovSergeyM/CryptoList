@@ -37,6 +37,7 @@ struct CoinRowView: View {
 struct CoinRowView_Previews: PreviewProvider {
     static var previews: some View {
         CoinRowView(coin: dev.coin, showHoldingsColumn: true)
+            .previewLayout(.sizeThatFits)
     }
 }
 

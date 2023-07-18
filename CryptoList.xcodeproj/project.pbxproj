@@ -19,6 +19,7 @@
 		E97019082A665D33009289EF /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97019072A665D33009289EF /* CoinRowView.swift */; };
 		E970190A2A665D9F009289EF /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97019092A665D9F009289EF /* PreviewProvider.swift */; };
 		E970190C2A66639C009289EF /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970190B2A66639C009289EF /* Double.swift */; };
+		E970190E2A6677D4009289EF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970190D2A6677D4009289EF /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E97019072A665D33009289EF /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		E97019092A665D9F009289EF /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		E970190B2A66639C009289EF /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		E970190D2A6677D4009289EF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		E97018FB2A665008009289EF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E970190D2A6677D4009289EF /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E97019082A665D33009289EF /* CoinRowView.swift in Sources */,
+				E970190E2A6677D4009289EF /* HomeViewModel.swift in Sources */,
 				E97018E82A664B8A009289EF /* ContentView.swift in Sources */,
 				E97018FD2A665015009289EF /* HomeView.swift in Sources */,
 				E97018E62A664B8A009289EF /* CryptoListApp.swift in Sources */,
