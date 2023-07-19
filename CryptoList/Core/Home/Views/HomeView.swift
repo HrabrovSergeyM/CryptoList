@@ -105,6 +105,11 @@ extension HomeView {
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
             } // ForEach
         } // List
+        .refreshable(action: {
+            withAnimation(.linear(duration: 2.0)) {
+                vm.reloadData()
+            }
+        })
         .listStyle(PlainListStyle())
     }
     
