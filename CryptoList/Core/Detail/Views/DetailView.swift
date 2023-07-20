@@ -29,18 +29,18 @@ struct DetailView: View {
     
     // MARK: - Properties
     
-    let coin: CoinModel
+    @StateObject var vm: DetailViewModel
     
     // MARK: - Init
     
     init(coin: CoinModel) {
-        self.coin = coin
+        _vm = StateObject(wrappedValue: DetailViewModel(coin: coin))
     }
     
     // MARK: - Body
     
     var body: some View {
-        Text(coin.name)
+        Text("Hi")
         
     }
     

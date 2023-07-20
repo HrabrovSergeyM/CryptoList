@@ -13,8 +13,6 @@ class CoinDataService {
     
     // MARK: - Properties
     
-
-    
     var coinSubscription: AnyCancellable?
     
     @Published var allCoins: [CoinModel] = []

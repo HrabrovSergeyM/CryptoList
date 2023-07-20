@@ -42,6 +42,7 @@ struct HomeView: View {
                 columnTitles
                 
                 if !showPortfolio {
+                    
                     allCoinsList
                     .transition(.move(edge: .leading))
                 }
