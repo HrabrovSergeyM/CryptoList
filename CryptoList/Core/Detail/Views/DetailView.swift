@@ -133,11 +133,12 @@ extension DetailView {
                         .lineLimit(showFullDescription ? nil : 3)
                         .font(.callout)
                         .foregroundColor(Color.theme.secondaryText)
+                        .animation(showFullDescription ? Animation.easeInOut : .none, value: showFullDescription)
                     
                     Button {
-                        withAnimation(.easeInOut) {
+//                        withAnimation(.easeInOut) {
                             showFullDescription.toggle()
-                        }
+//                        }
                     } label: {
                         Text(showFullDescription ? "Less" : "Read more...")
                             .font(.caption)
