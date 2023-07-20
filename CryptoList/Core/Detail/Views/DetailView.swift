@@ -29,7 +29,13 @@ struct DetailView: View {
     
     // MARK: - Properties
     
-    @StateObject var vm: DetailViewModel
+    @StateObject private var vm: DetailViewModel
+    
+    private let columns: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+    ]
+    private let spacing: CGFloat = 20
     
     // MARK: - Init
     
@@ -40,7 +46,23 @@ struct DetailView: View {
     // MARK: - Body
     
     var body: some View {
-        Text("Hi")
+        ScrollView {
+            VStack(spacing: 20) {
+                Text("hi")
+                    .frame(height: 150)
+                
+                overviewTitle
+                Divider()
+                overviewGrid
+                
+                additionalTitle
+                Divider()
+                additionalGrid
+                
+            } // VStack
+            .padding()
+        } // ScrollView
+        .navigationTitle(vm.coin.name)
         
     }
     
@@ -48,6 +70,60 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(coin: dev.coin)
+        NavigationStack {
+            DetailView(coin: dev.coin)
+        }
     }
+}
+
+extension DetailView {
+    
+    private var overviewTitle: some View {
+        
+        Text("Overview")
+            .font(.title)
+            .bold()
+            .foregroundColor(Color.theme.accent)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        
+    }
+    
+    private var additionalTitle: some View {
+        
+        Text("Additional Details")
+            .font(.title)
+            .bold()
+            .foregroundColor(Color.theme.accent)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        
+    }
+    
+    private var overviewGrid: some View {
+        
+        LazyVGrid(
+            columns: columns,
+            alignment: .leading,
+            spacing: spacing,
+            pinnedViews: []) {
+                ForEach(vm.overviewStatistics) { stat in
+                    StatisticView(stat: stat)
+                }
+            } // LazyVGrid
+        
+    }
+    
+    private var additionalGrid: some View {
+        
+        LazyVGrid(
+            columns: columns,
+            alignment: .leading,
+            spacing: spacing,
+            pinnedViews: []) {
+                ForEach(vm.additionalStatistics) { stat in
+                    StatisticView(stat: stat)
+                }
+            } // LazyVGrid
+        
+    }
+    
 }
