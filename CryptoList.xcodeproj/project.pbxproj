@@ -45,6 +45,7 @@
 		E9A8AE362A69350200ED9FD4 /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8AE352A69350200ED9FD4 /* CoinDetailDataService.swift */; };
 		E9A8AE382A6953B000ED9FD4 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8AE372A6953B000ED9FD4 /* ChartView.swift */; };
 		E9A8AE3A2A695B2200ED9FD4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8AE392A695B2200ED9FD4 /* Date.swift */; };
+		E9A8AE3F2A69826800ED9FD4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8AE3E2A69826800ED9FD4 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		E9A8AE352A69350200ED9FD4 /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
 		E9A8AE372A6953B000ED9FD4 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		E9A8AE392A695B2200ED9FD4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		E9A8AE3E2A69826800ED9FD4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +157,10 @@
 		E97018F82A664FE1009289EF /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E9A8AE2A2A69260000ED9FD4 /* Detail */,
-				E97018FE2A665110009289EF /* Components */,
 				E97018F92A664FF7009289EF /* Home */,
+				E97018FE2A665110009289EF /* Components */,
+				E9A8AE2A2A69260000ED9FD4 /* Detail */,
+				E9A8AE3B2A69821800ED9FD4 /* Settings */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -281,6 +284,22 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		E9A8AE3B2A69821800ED9FD4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E9A8AE3C2A69824D00ED9FD4 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E9A8AE3C2A69824D00ED9FD4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9A8AE3E2A69826800ED9FD4 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +376,7 @@
 				E9A8AE382A6953B000ED9FD4 /* ChartView.swift in Sources */,
 				E9A8AE162A67C8F900ED9FD4 /* StatisticView.swift in Sources */,
 				E97019112A66A211009289EF /* CoinDataService.swift in Sources */,
+				E9A8AE3F2A69826800ED9FD4 /* SettingsView.swift in Sources */,
 				E9A8AE252A68844C00ED9FD4 /* PortfolioContainer.xcdatamodeld in Sources */,
 				E9A8AE3A2A695B2200ED9FD4 /* Date.swift in Sources */,
 				E97019082A665D33009289EF /* CoinRowView.swift in Sources */,

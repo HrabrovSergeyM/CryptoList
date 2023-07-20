@@ -16,6 +16,9 @@ struct HomeView: View {
     @State private var showPortfolio: Bool = false
     @State private var showPortfolioView: Bool = false
     
+    @State private var showSettings: Bool = false
+    @State private var showSettingsView: Bool = false
+    
     @State private var selectedCoin: CoinModel? = nil
     @State private var showDetailView: Bool = false
     
@@ -55,6 +58,9 @@ struct HomeView: View {
                 Spacer(minLength: 0)
                 
             } // VStack
+            .sheet(isPresented: $showSettingsView) {
+                SettingsView()
+            }
             
         } // ZStack
         .background(
@@ -83,10 +89,11 @@ extension HomeView {
     private var homeHeader: some View {
         HStack {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
-                .animation(.none, value: showPortfolio)
                 .onTapGesture {
                     if showPortfolio {
                         showPortfolioView.toggle()
+                    } else {
+                        showSettingsView.toggle()
                     }
                 }
                 .background(
