@@ -13,6 +13,7 @@ struct CryptoListApp: App {
     // MARK: - Properties
     
     @StateObject private var vm = HomeViewModel()
+    @State private var showLaunchView: Bool = true
     
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
@@ -21,11 +22,27 @@ struct CryptoListApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                HomeView()
-                    .toolbar(.hidden, for: .navigationBar)
-            } // NavigationView
-            .environmentObject(vm)
+            ZStack {
+                
+                NavigationView {
+                    HomeView()
+                        .toolbar(.hidden, for: .navigationBar)
+                } // NavigationView
+                .environmentObject(vm)
+                
+                ZStack {
+                    if showLaunchView {
+                        LaunchView(showLaunchView: $showLaunchView)
+                            .transition(.move(edge: .leading))
+                    }
+                } // ZStack
+                .zIndex(2.0)
+                
+               
+                
+                
+                
+            } // ZStack
         }
     }
 }
