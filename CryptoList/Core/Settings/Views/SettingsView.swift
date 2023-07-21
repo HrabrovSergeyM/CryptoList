@@ -18,7 +18,7 @@ struct SettingsView: View {
     // MARK: - Body
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 aboutAppSection
                 developerSection
@@ -32,7 +32,7 @@ struct SettingsView: View {
                     XMarkButton()
                 }
             } // toolbar
-        } // NavigationStack
+        } // NavigationView
     }
 }
 

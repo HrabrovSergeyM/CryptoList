@@ -28,6 +28,7 @@ struct CryptoListApp: App {
                     HomeView()
                         .toolbar(.hidden, for: .navigationBar)
                 } // NavigationView
+                .navigationViewStyle(StackNavigationViewStyle())
                 .environmentObject(vm)
                 
                 ZStack {

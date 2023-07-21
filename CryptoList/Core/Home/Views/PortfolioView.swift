@@ -21,7 +21,7 @@ struct PortfolioView: View {
     // MARK: - Body
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
                     SearchBarView(searchText: $vm.searchText)
@@ -48,7 +48,7 @@ struct PortfolioView: View {
                     removeSelectedCoin()
                 }
             }
-        } // NavigationStack
+        } // NavigationView
         
     }
 }

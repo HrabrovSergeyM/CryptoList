@@ -84,7 +84,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
+        NavigationView {
             DetailView(coin: dev.coin)
         }
     }
