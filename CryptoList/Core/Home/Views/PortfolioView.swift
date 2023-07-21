@@ -21,7 +21,7 @@ struct PortfolioView: View {
     // MARK: - Body
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
                     SearchBarView(searchText: $vm.searchText)
@@ -34,6 +34,7 @@ struct PortfolioView: View {
                     
                 } // VStack
             } // ScrollView
+            .background(Color.theme.background.ignoresSafeArea())
             .navigationTitle("Edit Portfolio")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

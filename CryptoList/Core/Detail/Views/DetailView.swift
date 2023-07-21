@@ -71,6 +71,7 @@ struct DetailView: View {
             
            
         } // ScrollView
+        .background(Color.theme.background.ignoresSafeArea())
         .navigationTitle(vm.coin.name)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -84,7 +85,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             DetailView(coin: dev.coin)
         }
     }

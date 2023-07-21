@@ -18,11 +18,17 @@ struct SettingsView: View {
     // MARK: - Body
     
     var body: some View {
-        NavigationView {
-            List {
-                aboutAppSection
-                developerSection
-            } // List
+        NavigationStack {
+            
+            ZStack {
+                List {
+                    aboutAppSection
+                    developerSection
+                } // List
+                
+            } // ZStack
+            
+            
             .font(.headline)
             .tint(.blue)
             .listStyle(GroupedListStyle())
